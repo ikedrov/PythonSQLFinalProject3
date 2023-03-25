@@ -34,6 +34,7 @@ class SqlCalls:
 
     @staticmethod
     def create_table_users():
+
         with sqlite3.connect('mobile_calls.db') as db:
             cur = db.cursor()
             cur.execute('''CREATE TABLE IF NOT EXISTS mobile_users(
@@ -44,6 +45,7 @@ class SqlCalls:
 
     @staticmethod
     def create_table_prices():
+
         with sqlite3.connect('mobile_calls.db') as db:
             cur = db.cursor()
             cur.execute('''CREATE TABLE IF NOT EXISTS mobile_price(
@@ -55,6 +57,7 @@ class SqlCalls:
 
     @staticmethod
     def add_users(data_users):
+
         with sqlite3.connect('mobile_calls.db') as db:
             cur = db.cursor()
             cur.execute(
